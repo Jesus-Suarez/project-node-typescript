@@ -2,7 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 import { UserRouter } from './router/user.router';
-import { ConfigServer } from './confg/config';
+import { ConfigServer } from './config/config';
 import { Connection, createConnection } from 'typeorm';
 
 class ServerBootstrap extends ConfigServer {

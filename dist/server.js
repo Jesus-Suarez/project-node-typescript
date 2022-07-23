@@ -16,7 +16,7 @@ const express_1 = __importDefault(require("express"));
 const morgan_1 = __importDefault(require("morgan"));
 const cors_1 = __importDefault(require("cors"));
 const user_router_1 = require("./router/user.router");
-const config_1 = require("./confg/config");
+const config_1 = require("./config/config");
 const typeorm_1 = require("typeorm");
 class ServerBootstrap extends config_1.ConfigServer {
     constructor() {
