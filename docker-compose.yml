@@ -1,0 +1,18 @@
+version: '3.1'
+
+services:
+  project_mysql_db:
+    image: mysql:5.7
+    volumes:
+      # copiamos el directorio .sql
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    # ejecuta el sript copiado .sql
+    command: --init-file /docker-entrypoint-initdb.d/init.sql
+    ports:
+      - '3312:3306'
+    environment:
+      MYSQL_DATABASE: project_mysql_db
+      MYSQL_ROOT_USER: jesus
+      MYSQL_USER: jesus
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_PASSWORD: secret
