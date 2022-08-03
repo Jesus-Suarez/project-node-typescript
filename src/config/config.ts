@@ -45,7 +45,7 @@ export abstract class ConfigServer {
 			database: this.getEnviroment('DB_DATABASE'),
 			entities: [__dirname + '/../**/*.entity{.ts,.js}'],
 			migrations: [__dirname + '/../../migrations/*{.ts,.js}'],
-			synchronize: true,
+			synchronize: true, //para borrar tabla y subirlas de nuevo
 			logging: false,
 			namingStrategy: new SnakeNamingStrategy(), //userName => user_name
 		};
